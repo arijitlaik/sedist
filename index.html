@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./node_modules/phonon/dist/css/phonon.min.css" />
+  <!--<script type="module" src="src/index.js" defer></script>-->
+</head>
+
+<body>
+  <home data-page="true" class="app-page app-active">
+    <header class="header-bar">
+      <div class="center">
+        <h1 class="title">SeDist</h1>
+      </div>
+    </header>
+    <div class="content">
+      <div class="padded-full">
+        <div class="row text-left">
+          <div class="tablet-2 large-2 phone-4 column content">
+            <button class="btn  negative" id="inject_test">inject_test</button>
+
+
+            <ul class="list">
+              <li>
+                <i class="pull-right icon icon-expand-more"></i>
+                <a href="#link1" class="padded-list">Input Data</a>
+                <div class="accordion-content">
+                  <div class="input-wrapper">
+                    <input class="with-label" type="text" id="sampleId">
+                    <label class="floating-label" for="sampleId">Sample ID:</label>
+                  </div>
+                  <div class="input-wrapper">
+                    <input class="with-label" type="text" id="userName">
+                    <label class="floating-label" for="userName">User Name</label>
+                  </div>
+                  ASTM Sieve Start
+                  <input type="number" min="4" max="635" value="25" id="startSieve"> End
+                  <input type="number" min="4" max="635" value="230" id="endSieve">
+                  <label class="checkbox">
+                        <input type="checkbox" name="checkbox1" id='cuEmptyCheck'>
+                        <span></span>
+                        <span class="text">Use Cu Empty Data</span>
+                      </label>
+                  <button class="btn" id="tada">Create Table</button>
+                </div>
+              </li>
+              <li>
+                <i class="pull-right icon icon-expand-more"></i>
+                <a href="#link2" class="padded-list">Process Data</a>
+                <div class="accordion-content">
+                  <ul class="list">
+                    <li class="padded-for-list"><button class="btn" id="draw_lrs">draw trend line</button>
+                    </li>
+                    <li class="padded-for-list"><button class="btn" id="draw_int">draw intersections</button>
+                    </li>
+                  </ul>
+
+                </div>
+              </li>
+              <li>
+                <i class="pull-right icon icon-expand-more"></i>
+                <a href="#link3" class="padded-list">Link 3</a>
+                <div class="accordion-content">
+                  Export Data
+                </div>
+              </li>
+            </ul>
+
+
+          </div>
+          <div class="tablet-5 large-5 column padded-left">
+            <div class="">
+              <table id="inpTable" class="table  table-expanded">
+
+                <tr>
+                  <thead>
+                    <th colspan="3">Sample No:
+                      <b>236</b>
+                    </th>
+                    <th colspan="2">Sieve Weight (in gms)</th>
+                    <th colspan="3">Snd weight</th>
+                  </thead>
+                </tr>
+                <tr>
+                  <thead>
+                    <th>Sieve No.</th>
+                    <th>Φ</th>
+                    <th>mm</th>
+                    <th>empty</th>
+                    <th>with sand</th>
+                    <th>wt in gms</th>
+                    <th>% wt.</th>
+                    <th>cumulative %</th>
+                  </thead>
+                </tr>
+
+                <tbody id="inpTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+          <div class="tablet-4 large-4 column">
+            <div id="container" style="min-width: 310px; height: 500px; max-width: 400px"></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+  </home>
+  <script type="text/javascript" src="./node_modules/phonon/dist/js/phonon.min.js"></script>
+
+  <script>
+    phonon.options({
+      navigator: {
+        defaultPage: 'home',
+        animatePages: true,
+        enableBrowserBackButton: true,
+        templateRootDirectory: './'
+      },
+      i18n: null // for this example, we do not use internationalization
+    });
+
+    var app_phonon = phonon.navigator();
+    app_phonon.on({
+      page: 'home',
+      preventClose: false,
+      content: null
+    });
+
+    app_phonon.start();
+  </script>
+  <style>
+    .table thead tr th,
+    table thead tr th {
+      vertical-align: bottom;
+      border: 1px solid #ddd;
+      background: #f6f6f6;
+    }
+
+  </style>
+  <script type="text/javascript" src="dist/bundle.js" charset="utf-8" defer></script>
+</body>
+
+
+</html>

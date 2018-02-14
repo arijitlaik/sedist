@@ -1,0 +1,36 @@
+{
+  "name": "sedist",
+  "version": "1.0.0",
+  "description": "Sediment Grain Size Analysis WebApp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "github.com/arijitlaik/sedist"
+  },
+  "keywords": [
+    "sedimentology",
+    "grain",
+    "size",
+    "analysis",
+    "probability",
+    "plot",
+    "geology"
+  ],
+  "author": "Arijit Laik",
+  "license": "GPL-3.0",
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.4.0",
+    "highcharts": "^6.0.6",
+    "webpack": "^2.4.1"
+  },
+  "dependencies": {
+    "eslint": "^4.17.0",
+    "phonon": "^1.4.9",
+    "regression": "^2.0.1"
+  }
+}

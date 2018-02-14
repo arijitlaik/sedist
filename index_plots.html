@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="css/style.css" rel="stylesheet">-->
+    <script src="js/highcharts.js"></script>
+    <script src="js/exporting.js"></script>
+    <script src="js/offline-exporting.js"></script>
+</head>
+
+<body>
+    <div id="container" style="min-width: 310px; height: 500px; max-width: 400px; margin: 0 auto"></div>
+    <button id="draw_lrs" onclick="drawlinselected( chart.getSelectedPoints())">draw trend line</button>
+    <button id="draw_lrs" onclick="drawinters()">draw intersections</button>
+    <script src="js/regression.min.js"></script>
+    <script src="node_modules/jstat/dist/jstat.min.js"></script>
+    <script src="js/sedist.js"></script>
+</body>
+
+</html>
