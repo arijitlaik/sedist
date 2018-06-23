@@ -15,6 +15,7 @@ var Linebutton = document.getElementById("draw_lrs");
 var Intxbutton = document.getElementById("draw_int");
 var injectxbutton = document.getElementById("inject_test");
 var plotbutton = document.getElementById("plot_data");
+
 Linebutton.onclick = function() {
   drawlinselected(chart.getSelectedPoints())
 }
