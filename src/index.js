@@ -14,7 +14,7 @@ var Genbutton = document.getElementById("tada");
 var Linebutton = document.getElementById("draw_lrs");
 var Intxbutton = document.getElementById("draw_int");
 var injectxbutton = document.getElementById("inject_test");
-
+var plotbutton = document.getElementById("plot_data");
 Linebutton.onclick = function() {
   drawlinselected(chart.getSelectedPoints())
 }
@@ -83,6 +83,9 @@ injectxbutton.onclick = function() {
   testWithSand.map((e, i) => emptyWt[i].value = e)
   emptyWt = document.getElementsByClassName('emptyWt')
   testEmpty.map((e, i) => emptyWt[i].value = e)
+}
+
+plotbutton.onclick = function() {
   calc_percentage()
   plot_Data()
 }
