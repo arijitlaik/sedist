@@ -30,7 +30,7 @@
     "webpack": "^2.4.1"
   },
   "dependencies": {
-    "eslint": "^4.17.0",
+    "eslint": "^4.18.2",
     "phonon": "^1.4.9",
     "regression": "^2.0.1"
   }
